@@ -41,7 +41,7 @@ const [year, setYear] = useState(today.getFullYear());
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const res = await axios.get("https://buddha-avenue-backend.vercel.app/api/bookings");
+        const res = await axios.get("https://budha-avenue-backend.vercel.app/api/bookings");
         const grouped = {};
         res.data.forEach(b => {
           // Use only the date part (before 'T') for grouping
@@ -339,7 +339,7 @@ const [year, setYear] = useState(today.getFullYear());
                 }
                 setSearchLoading(true);
                 try {
-                  const resp = await axios.get(`https://buddha-avenue-backend.vercel.app/api/bookings/search?q=${encodeURIComponent(val)}`);
+                  const resp = await axios.get(`https://budha-avenue-backend.vercel.app/api/bookings/search?q=${encodeURIComponent(val)}`);
                   // Only show results for the selected date
                   const results = (resp.data.data || resp.data || []).filter(b => {
                     const dateKey = b.startDate && b.startDate.split('T')[0];

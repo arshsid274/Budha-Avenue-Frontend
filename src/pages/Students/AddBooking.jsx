@@ -324,7 +324,7 @@ const AddBooking = () => {
       // Debug: Confirm statusHistory is an array
       console.log("Payload being sent to backend:", payload, typeof payload.statusHistory, Array.isArray(payload.statusHistory));
       const response = await axios.post(
-        "https://buddha-avenue-backend.vercel.app/api/bookings/create",
+        "https://budha-avenue-backend.vercel.app/api/bookings/create",
         payload
       );
 

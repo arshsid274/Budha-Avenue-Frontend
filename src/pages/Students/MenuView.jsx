@@ -20,7 +20,7 @@ const MenuView = () => {
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        const res = await axios.get(`https://buddha-avenue-backend.vercel.app/api/menu/${bookingRef}`);
+        const res = await axios.get(`https://budha-avenue-backend.vercel.app/api/menu/${bookingRef}`);
         setMenu(res.data.data);
       } catch (error) {
         setError("Failed to load menu. Please try again later.");
