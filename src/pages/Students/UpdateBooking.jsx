@@ -202,7 +202,7 @@ useEffect(() => {
 
   const fetchBookingDetail = () => {
     axios
-      .get(`http://localhost:5000/api/bookings/${id}`)
+      .get(`https://buddha-avenue-backend.vercel.app/api/bookings/${id}`)
       .then((res) => {
         if (res.data) {
           const bookingData = res.data.data || res.data;
@@ -464,7 +464,7 @@ const handleNumberInputChange = (e) => {
     console.log('Updating booking with data:', payload);
 
     axios
-      .put(`http://localhost:5000/api/bookings/${id}`, payload)
+      .put(`https://buddha-avenue-backend.vercel.app/api/bookings/${id}`, payload)
       .then((res) => {
         if (res.data) {
           toast.success("Booking updated successfully!");

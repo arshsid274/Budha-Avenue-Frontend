@@ -19,7 +19,7 @@ const [booking,setBooking]=useState(null);
       setLoading(true);
       setError(null);
       try {
-        const res = await axios.get(`http://localhost:5000/api/menu/all/${customerRef}`);
+        const res = await axios.get(`https://buddha-avenue-backend.vercel.app/api/menu/all/${customerRef}`);
         setBooking(res.data.booking);
         console.log(res.data.booking)
         setMenu(res.data.menu);
@@ -35,7 +35,7 @@ const [booking,setBooking]=useState(null);
   const handleSave = async (selectedItems, categorizedMenu) => {
     try {
       setLoading(true);
-      await axios.put(`http://localhost:5000/api/menu/update/${customerRef}`, { categorizedMenu });
+      await axios.put(`https://buddha-avenue-backend.vercel.app/api/menu/update/${customerRef}`, { categorizedMenu });
       toast.success("Menu updated successfully!");
       setMenu(categorizedMenu);
       setShowSelector(false);
